@@ -1,6 +1,6 @@
 # Codenames Board Game Companion Using the SBERT Language Model
 
-Semester project done by Arsenij Nikulin, Vilnius University student. 
+Semester project done by Arsenij Nikulin, Vilnius University student. The technical documentation (pdf) located in the root directory.
 
 ## Start the Application
 
@@ -11,7 +11,7 @@ pip install -r requirements.txt
 
 Run FastAPI server
 ```commandline
-uvicorn app:app --host 0.0.0.0 --port 8000 --reload
+uvicorn app:app --host localhost --port 8000 --reload
 ```
 
 **Important!** Do not interact with system before you see in terminal:

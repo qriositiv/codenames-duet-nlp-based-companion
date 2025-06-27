@@ -1,5 +1,5 @@
 export function setupWebSocket(updateGameUI) {
-    const socket = new WebSocket("ws://127.0.0.1:80/ws");
+    const socket = new WebSocket("ws://127.0.0.1:8000/ws");
 
     socket.onopen = () => console.log("[WebSocket] Connected");
 
