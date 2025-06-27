@@ -1,0 +1,8 @@
+# Byte-compiled Python cache directories
+__pycache__/
+
+# IDE project files
+.idea/
+
+# Pretrained SBERT model files
+sbert_model/

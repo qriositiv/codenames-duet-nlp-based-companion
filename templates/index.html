@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Codenames Duet</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="/static/main.js"></script>
+    <script type="module" src="/static/reset-game.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="flex gap-8 p-8 bg-gray-100 text-gray-800">
+
+    <!-- Left Column -->
+    <div class="flex flex-col gap-6 w-3/4">
+
+        <!-- Game Status -->
+        <div id="game-status" class="flex justify-between text-lg bg-white p-4 rounded shadow">
+            <div class="flex space-x-4">
+                <i class="fa-solid text-2xl"></i>
+                <p class="m-auto"></p>
+            </div>
+            <div class="flex space-x-4">
+                <button id="reset-button" class="rounded-md text-base px-2 border border-gray-500 text-gray-500 hover:bg-gray-700 hover:text-white transition">Start new game</button>
+                <!-- <i class="fa-solid fa-circle-info text-2xl text-gray-700 hover:scale-110 transition-transform"></i>-->
+            </div>
+        </div>
+
+        <!-- Game Board -->
+        <div id="game-board" class="grid grid-cols-5 gap-4"></div>
+
+        <!-- Clue Display and Input -->
+       <div id="clue-display" class="bg-white p-4 rounded shadow flex space-x-4">
+            <!-- Clue Form -->
+            <form id="clue-form" class="w-full" style="display: none">
+                <input name="clue_word" type="text" placeholder="Clue word" class="border p-2 rounded w-1/2 mt-1" required>
+                <input name="clue_number" type="number" placeholder="Number" min="1" max="9" class="border p-2 rounded w-24 mt-1 ml-2" required>
+                <button type="submit" class="bg-green-400 hover:bg-green-500 text-black px-4 py-2 rounded ml-2">Submit</button>
+            </form>
+
+            <!-- Last Clue Text -->
+            <p id="clue-text" class="my-auto text-lg" style="display: none;"></p>
+
+            <!-- Finish Guessing Button -->
+            <button id="finish-guessing" class="my-auto" type="button" style="display: none;"></button>
+        </div>
+
+    </div>
+
+    <!-- Right Column -->
+    <div class="flex flex-col gap-6 w-1/4">
+
+        <!-- Scoreboard -->
+        <div id="scoreboard" class="bg-white p-4 rounded shadow">
+            <p><strong>Agents Remaining:</strong> <span id="agents-remaining">—</span></p>
+            <p><strong>Time Tokens:</strong> <span id="time-tokens">—</span></p>
+        </div>
+
+        <!-- History -->
+        <div id="history" class="bg-white p-4 rounded shadow">
+            <ul class="text-sm space-y-4"></ul>
+        </div>
+    </div>
+</body>
+</html>
